@@ -1,6 +1,7 @@
 package project.spring.jang.dish;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import lombok.Data;
 
@@ -22,7 +23,7 @@ class Dishs {
         return delivered ? description + "먹는다" : description + "기다린다";
     }
 }
-class KitchenServices {
+@Service class KitchenServices {
     Flux<Dishs> getDishes(){
         return Flux.just(new Dishs("김치찌개"),
                 new Dishs("떡볶이"),
