@@ -30,13 +30,13 @@ class Dishs {
                 new Dishs("삼계탕"));
     }
 }
-@RequiredArgsConstructor class PrototypeServer {
+@Data final class PrototypeServer {
     private final KitchenServices kitchen;
     Flux<Dishs> doingMyJob(){
         return kitchen.getDishes().map(dishs -> Dishs.deliver((dishs)));
     }
 }
-@RequiredArgsConstructor class AdvancedServer {
+@Data final class AdvancedServer {
     private final KitchenServices kitchen;
 
     Flux<Dishs> doingMyJob(){

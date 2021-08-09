@@ -12,6 +12,4 @@ public class CartItem {
         this.item = item;
         this.quantity = 1;
     }
-
-
 }
